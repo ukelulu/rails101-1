@@ -13,8 +13,10 @@ class GroupsController < ApplicationController
     @group.save
 
       redirect_to groups_path
-    end
-
+  end
+  def edit
+    @group = Group.find(params[:id])
+  end
     private
 
     def group_params
