@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
   end
   def show
     @group =Group.find(params[:id])
-    @posts =@group.posts.rencent
+    @posts =@group.posts.rencent.paginate(:page => params[:page], :per_page => 5)
 
   end
   def new
