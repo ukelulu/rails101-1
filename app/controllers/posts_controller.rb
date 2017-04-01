@@ -18,7 +18,9 @@ end
       render :new
     end
 end
-
+def edit
+  @post = Post.find(post_params[:id])
+end
 
 
 private
